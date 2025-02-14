@@ -1,26 +1,26 @@
 const Hero = () => {
   return (
-    <section className="box-border relative z-10 h-full pt-24 pb-24 font-[Lato,_sans-serif] text-center">
+    <section className="box-border relative z-10 h-full pt-16 md:pt-24 pb-16 md:pb-24 font-[Lato,_sans-serif] text-center">
       {/* Dark overlay */}
-      <div className="absolute h-[700px] inset-0 bg-black/70 z-0" />
+      <div className="absolute h-[500px] md:h-[700px] inset-0 bg-black/70 z-0" />
       
-      {/* Background image - Add this class to your global CSS */}
-      <div className="absolute inset-0 bg-bg-image bg-top bg-cover object-cover h-[700px] -z-10" />
+      {/* Background image */}
+      <div className="absolute inset-0 bg-bg-image bg-top bg-cover object-cover h-[500px] md:h-[700px] -z-10" />
 
       {/* Content container */}
-      <div className="relative z-10 max-w-4xl mx-auto">
-        <h1 className="text-6xl font-semibold text-white leading-none mb-4">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white leading-tight md:leading-none mb-3 md:mb-4">
           Buying or selling a used car?
         </h1>
-        <h2 className="text-6xl font-semibold text-[#F5C150] leading-none mb-4">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-[#F5C150] leading-tight md:leading-none mb-3 md:mb-4">
           Get Vehicle History Report
         </h2>
-        <p className="text-lg text-white font-light mb-8">
+        <p className="text-base md:text-lg text-white font-light mb-6 md:mb-8">
           Vintory Helps You Buy and Sell With Confidence
         </p>
 
-        <form className="w-full max-w-2xl mx-auto">
-          <div className="flex items-center justify-center">
+        <form className="w-full max-w-2xl mx-auto px-4 sm:px-0">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-0">
             <input
               type="text"
               aria-label="search_vin"
@@ -28,11 +28,11 @@ const Hero = () => {
               minLength={17}
               maxLength={17}
               placeholder="Input VIN"
-              className="w-2/3 p-2 rounded-l-md border-2 border-[#208BD3] uppercase"
+              className="w-full sm:w-2/3 p-2 rounded-md sm:rounded-r-none border-2 border-[#208BD3] uppercase"
             />
             <button
               type="submit"
-              className="px-4 py-2 bg-[#1976d2] text-white rounded-r-md border-2 border-[#208BD3] hover:bg-[#1565c0] transition-colors"
+              className="w-full sm:w-auto px-4 py-2 bg-[#1976d2] text-white rounded-md sm:rounded-l-none border-2 border-[#208BD3] hover:bg-[#1565c0] transition-colors"
             >
               Check VIN
             </button>
@@ -44,14 +44,14 @@ const Hero = () => {
               id="checkbox"
               name="checkbox"
               required
-              className="w-5 h-5 accent-[#1976d2]"
+              className="w-4 h-4 sm:w-5 sm:h-5 accent-[#1976d2]"
             />
-            <label htmlFor="checkbox">
+            <label htmlFor="checkbox" className="text-sm sm:text-base">
               Yes, I am the owner of the vehicle
             </label>
           </div>
 
-          <p className="text-gray-300 text-sm mt-7 max-w-xl mx-auto">
+          <p className="text-xs sm:text-sm text-gray-300 mt-5 sm:mt-7 max-w-xl mx-auto px-4 sm:px-0">
             This site is protected by reCAPTCHA and the Google{" "}
             <a
               href="https://policies.google.com/privacy"
